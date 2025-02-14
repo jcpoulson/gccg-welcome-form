@@ -84,6 +84,7 @@ const AutoCompleteTextField: React.FC<GhostPreviewAutocompleteProps> = ({
             inputValue={inputValue}
             onInputChange={(_, newInputValue) => {
                 setInputValue(newInputValue);
+                setFormValue(newInputValue)
                 // Re-open if there’s text and the field is still focused
                 if (newInputValue.length > 0 && isFocused) {
                     setOpen(true);
